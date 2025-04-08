@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Personal-Website/static/css/main.0be9e4ca.css",
+    "main.js": "/Personal-Website/static/js/main.777c28fb.js",
+    "static/js/415.fc063c41.chunk.js": "/Personal-Website/static/js/415.fc063c41.chunk.js",
+    "static/js/787.f6e65957.chunk.js": "/Personal-Website/static/js/787.f6e65957.chunk.js",
+    "static/media/James_Pham_s_Technical_Resume.pdf": "/Personal-Website/static/media/James_Pham_s_Technical_Resume.eb5839f80a4b33921e58.pdf",
+    "static/media/home-main.svg": "/Personal-Website/static/media/home-main.541f8179af8209ce03ccf2178fe62dbf.svg",
+    "static/media/pre.svg": "/Personal-Website/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/Personal-Website/index.html",
+    "main.0be9e4ca.css.map": "/Personal-Website/static/css/main.0be9e4ca.css.map",
+    "main.777c28fb.js.map": "/Personal-Website/static/js/main.777c28fb.js.map",
+    "415.fc063c41.chunk.js.map": "/Personal-Website/static/js/415.fc063c41.chunk.js.map",
+    "787.f6e65957.chunk.js.map": "/Personal-Website/static/js/787.f6e65957.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0be9e4ca.css",
+    "static/js/main.777c28fb.js"
+  ]
+}
