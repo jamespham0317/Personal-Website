@@ -26,7 +26,7 @@ function Home2() {
               <i>
                 <b className="green"> passion </b>
               </i> 
-              or building things that are both 
+              for building things that are both 
               <i>
                 <b className="green"> useful and fun. </b>
               </i>
