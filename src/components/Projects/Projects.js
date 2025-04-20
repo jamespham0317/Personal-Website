@@ -2,6 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
+import spaceinvadersclone from "../../Assets/Projects/SpaceInvadersClone.png";
+import recycleradar from "../../Assets/Projects/RecycleRadar.png";
+import sleeptracker from "../../Assets/Projects/SleepTracker.png";
 
 function Projects() {
   return (
@@ -30,6 +33,17 @@ function Projects() {
             <ProjectCard
               // imgPath={}
               isBlog={false}
+              title="Maze Generator and Solver"
+              description="An interactive maze generator and visual pathfinding tool. Generates mazes using randomized depth-first search (DFS), and solved using a variety of algorithms with real-time animation. Solvers include depth-first search, breadth-first search, A* search, greedy best-first search, wall follower (left and right hand), and dead-end filler."
+              ghLink="https://github.com/jamespham0317/Maze-Generator-and-Solver"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              // imgPath={spaceinvadersclone}
+              isBlog={false}
               title="Space Invaders Clone"
               description="A modern reimagining of the classic Space Invaders arcade game. Features wave-based enemy mechanics, smooth player movement and laser firing, collision detection between lasers, enemies, and obstacles, game over condition, and scoring and persistent high-score tracking. Developed using C++ and the raylib graphics library."
               ghLink="https://github.com/jamespham0317/Space-Invaders"
@@ -39,7 +53,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              // imgPath={}
+              // imgPath={recycleradar}
               isBlog={false}
               title="Recycle Radar"
               description="A smart recycling assistant to make all things recycling easy. Determines the recyclability of the material in the user-uploaded image using the Google Gemini Vision API. Features an interactive map showing nearby recycling depots filtered by material type using the Google Maps API and a news feed displaying relevant articles and community events. Developed using React."
@@ -50,7 +64,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              // imgPath={}
+              // imgPath={sleeptracker}
               isBlog={false}
               title="Sleep Tracker"
               description="A sleep tracker to help you hit your sleep goals. Displays sleep sessions along with average time asleep and average quality of sleep based on user-entered data. Developed using Java and Java Swing and tested using JUnit."
