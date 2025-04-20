@@ -34,7 +34,7 @@ function Projects() {
               // imgPath={}
               isBlog={false}
               title="Maze Generator and Solver"
-              description="An interactive maze generator and visual pathfinding tool. Generates mazes using randomized depth-first search (DFS), and solved using a variety of algorithms with real-time animation. Solvers include depth-first search, breadth-first search, A* search, greedy best-first search, wall follower (left and right hand), and dead-end filler."
+              description="An interactive maze generator and visual pathfinding tool. Generates and solves mazes using a variety of algorithms with real-time animation. Generators include DFS, Prim's algorithm, and Kruskal's algorithm. Solvers include DFS, BFS, A* search, greedy best-first search, wall follower (left and right hand), and dead-end filler."
               ghLink="https://github.com/jamespham0317/Maze-Generator-and-Solver"
               demoLink=""
             />
