@@ -45,7 +45,7 @@ function Projects() {
               // imgPath={}
               isBlog={false}
               title="Tumor Classification via CNN"
-              description="A Convolutional Neural Network (CNN) built with TensorFlow/Keras to classify histopathology images of tumors as either benign or malignant using the BreakHis dataset. Developed using Python and visualized using Matplotlib."
+              description="A Convolutional Neural Network (CNN) built with TensorFlow and Keras to classify histopathology images of tumors as either benign or malignant using the BreakHis dataset. Developed using Python and visualized training performance using Matplotlib."
               ghLink="https://github.com/jamespham0317/Tumor-Classifier"
               demoLink=""
             />
