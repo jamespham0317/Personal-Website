@@ -23,8 +23,8 @@ function Projects() {
               // imgPath={}
               isBlog={false}
               title="Thyme Saver"
-              description="A smart cooking assistant to help you make your favourite foods. Provides the required ingredients and instructions for the food in the user-uploaded image using the Google Gemini Vision API. Allows for user registration and login, encrypted using BCrypt and stored in a PostgreSQL database. Developed using React and node.js, and deployed on Railway."
-              ghLink="https://github.com/jamespham0317/Recipe-Finder"
+              description="A smart cooking assistant to help you make your favourite foods. Provides the required ingredients and instructions for the food in the user-uploaded image using the Google Gemini Vision API. Allows for user registration and login, encrypted using BCrypt and stored in a PostgreSQL database. Developed using React and node.js, and deployed using AWS."
+              ghLink="https://github.com/jamespham0317/Thyme-Saver"
               demoLink=""
             />
           </Col>
@@ -34,8 +34,19 @@ function Projects() {
               // imgPath={}
               isBlog={false}
               title="Maze Generator and Solver"
-              description="An interactive maze generator and visual pathfinding tool. Generates and solves mazes using a variety of algorithms with real-time animation. Generators include DFS, Prim's algorithm, and Kruskal's algorithm. Solvers include DFS, BFS, A* search, greedy best-first search, wall follower (left and right hand), and dead-end filler."
+              description="An interactive maze generator and visual pathfinding tool. Generates and solves mazes using a variety of algorithms with real-time animation. Generators include DFS, Prim's algorithm, and Kruskal's algorithm. Solvers include DFS, BFS, A* search, greedy best-first search, wall follower (left and right hand), and dead-end filler. Developed using C++ and the raylib graphics library."
               ghLink="https://github.com/jamespham0317/Maze-Generator-and-Solver"
+              demoLink=""
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              // imgPath={}
+              isBlog={false}
+              title="Tumor Classification via CNN"
+              description="A Convolutional Neural Network (CNN) built with TensorFlow/Keras to classify histopathology images of tumors as either benign or malignant using the BreakHis dataset. Developed using Python and visualized using Matplotlib."
+              ghLink="https://github.com/jamespham0317/Tumor-Classifier"
               demoLink=""
             />
           </Col>
