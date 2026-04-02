@@ -6,53 +6,61 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
+const socialLinks = [
+  {
+    href: "https://github.com/jamespham0317",
+    label: "GitHub",
+    icon: AiFillGithub,
+  },
+  {
+    href: "https://www.linkedin.com/in/james-pham-6588182aa/",
+    label: "LinkedIn",
+    icon: FaLinkedinIn,
+  },
+  {
+    href: "mailto:jamespham2000@gmail.com",
+    label: "Email",
+    icon: AiFillMail,
+  },
+];
+
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <Container fluid className="footer">
-      <Row>
-        <Col md="4" className="footer-copywright">
-          <h3>Designed by James Pham</h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year}</h3>
-        </Col>
-        <Col md="4" className="footer-body">
-          <ul className="footer-icons">
-            <li className="social-icons">
-              <a
-                href="https://github.com/jamespham0317"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/james-pham-6588182aa/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="mailto:jamespham2000@gmail.com"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <AiFillMail />
-              </a>
-            </li>
-          </ul>
-        </Col>
-      </Row>
+      <Container className="footer-shell">
+        <Row className="align-items-center">
+          <Col lg="4" className="footer-copywright">
+            <p className="footer-kicker">James Pham</p>
+            <h3>Designed and built with React.</h3>
+          </Col>
+          <Col lg="4" className="footer-copywright">
+            <p className="footer-kicker">Current Focus</p>
+            <h3>Full-stack applications, cloud systems, and practical machine learning.</h3>
+          </Col>
+          <Col lg="4" className="footer-body">
+            <p className="footer-kicker">Connect</p>
+            <ul className="footer-icons">
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <li className="social-icons" key={label}>
+                  <a
+                    href={href}
+                    className="footer-social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                  >
+                    <Icon />
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="footer-copy">Copyright © {year}</p>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 }

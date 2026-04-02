@@ -2,87 +2,73 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import spaceinvadersclone from "../../Assets/Projects/SpaceInvadersClone.png";
-import recycleradar from "../../Assets/Projects/RecycleRadar.png";
-import sleeptracker from "../../Assets/Projects/SleepTracker.png";
+
+const projects = [
+  {
+    title: "Thyme Saver",
+    description: "A smart cooking assistant that uses Gemini Vision to identify dishes from uploaded images, suggest ingredients, and generate instructions. It includes user authentication with BCrypt, PostgreSQL-backed accounts, and AWS deployment.",
+    ghLink: "https://github.com/jamespham0317/Thyme-Saver",
+    demoLink: "",
+    stack: ["React", "Node.js", "PostgreSQL", "AWS"],
+  },
+  {
+    title: "Maze Generator and Solver",
+    description: "An interactive maze visualizer that generates and solves mazes using multiple algorithms with real-time animation, including DFS, Prim's, Kruskal's, BFS, A*, greedy best-first search, and wall-following strategies.",
+    ghLink: "https://github.com/jamespham0317/Maze-Generator-and-Solver",
+    demoLink: "",
+    stack: ["C++", "Algorithms", "raylib"],
+  },
+  {
+    title: "Tumor Classification via CNN",
+    description: "A convolutional neural network built with TensorFlow and Keras to classify histopathology images as benign or malignant, with training insights visualized using Matplotlib.",
+    ghLink: "https://github.com/jamespham0317/Tumor-Classifier",
+    demoLink: "",
+    stack: ["Python", "TensorFlow", "Keras", "Matplotlib"],
+  },
+  {
+    title: "Space Invaders Clone",
+    description: "A modern reimagining of Space Invaders with wave-based enemies, responsive controls, collision systems, persistent scoring, and gameplay polish implemented using raylib.",
+    ghLink: "https://github.com/jamespham0317/Space-Invaders",
+    demoLink: "",
+    stack: ["C++", "Game Development", "raylib"],
+  },
+  {
+    title: "Recycle Radar",
+    description: "A recycling assistant that uses Gemini Vision for material identification and pairs it with a map of nearby recycling depots plus a feed of relevant articles and community events.",
+    ghLink: "https://github.com/jamespham0317/nwhacks2025",
+    demoLink: "",
+    stack: ["React", "Maps API", "Gemini Vision"],
+  },
+  {
+    title: "Sleep Tracker",
+    description: "A Java desktop application for tracking sleep sessions, average sleep duration, and sleep quality through a simple interface, with JUnit-backed testing and a demo video.",
+    ghLink: "https://github.com/jamespham0317/Sleep-Tracker",
+    demoLink: "https://youtu.be/UwbJ_I7ReZ8",
+    stack: ["Java", "Swing", "JUnit"],
+  },
+];
 
 function Projects() {
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          My Recent <strong className="green">Works </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              // imgPath={}
-              isBlog={false}
-              title="Thyme Saver"
-              description="A smart cooking assistant to help you make your favourite foods. Provides the required ingredients and instructions for the food in the user-uploaded image using the Google Gemini Vision API. Allows for user registration and login, encrypted using BCrypt and stored in a PostgreSQL database. Developed using React and node.js, and deployed using AWS."
-              ghLink="https://github.com/jamespham0317/Thyme-Saver"
-              demoLink=""
-            />
-          </Col>
+        <div className="project-intro">
+          <p className="section-eyebrow">Selected Work</p>
+          <h1 className="project-heading">
+            Projects that blend <strong className="green">product thinking</strong> with engineering depth.
+          </h1>
+          <p className="project-subheading">
+            Here are a few projects I&apos;ve worked on recently across web, cloud, systems, and machine learning.
+          </p>
+        </div>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              // imgPath={}
-              isBlog={false}
-              title="Maze Generator and Solver"
-              description="An interactive maze generator and visual pathfinding tool. Generates and solves mazes using a variety of algorithms with real-time animation. Generators include DFS, Prim's algorithm, and Kruskal's algorithm. Solvers include DFS, BFS, A* search, greedy best-first search, wall follower (left and right hand), and dead-end filler. Developed using C++ and the raylib graphics library."
-              ghLink="https://github.com/jamespham0317/Maze-Generator-and-Solver"
-              demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              // imgPath={}
-              isBlog={false}
-              title="Tumor Classification via CNN"
-              description="A Convolutional Neural Network (CNN) built with TensorFlow and Keras to classify histopathology images of tumors as either benign or malignant using the BreakHis dataset. Developed using Python and visualized training performance using Matplotlib."
-              ghLink="https://github.com/jamespham0317/Tumor-Classifier"
-              demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              // imgPath={spaceinvadersclone}
-              isBlog={false}
-              title="Space Invaders Clone"
-              description="A modern reimagining of the classic Space Invaders arcade game. Features wave-based enemy mechanics, smooth player movement and laser firing, collision detection between lasers, enemies, and obstacles, game over condition, and scoring and persistent high-score tracking. Developed using C++ and the raylib graphics library."
-              ghLink="https://github.com/jamespham0317/Space-Invaders"
-              demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              // imgPath={recycleradar}
-              isBlog={false}
-              title="Recycle Radar"
-              description="A smart recycling assistant to make all things recycling easy. Determines the recyclability of the material in the user-uploaded image using the Google Gemini Vision API. Features an interactive map showing nearby recycling depots filtered by material type using the Google Maps API and a news feed displaying relevant articles and community events. Developed using React."
-              ghLink="https://github.com/jamespham0317/nwhacks2025"
-              demoLink=""              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              // imgPath={sleeptracker}
-              isBlog={false}
-              title="Sleep Tracker"
-              description="A sleep tracker to help you hit your sleep goals. Displays sleep sessions along with average time asleep and average quality of sleep based on user-entered data. Developed using Java and Java Swing and tested using JUnit."
-              ghLink="https://github.com/jamespham0317/Sleep-Tracker"
-              demoLink="https://youtu.be/UwbJ_I7ReZ8"
-            />
-          </Col>
+        <Row className="project-grid">
+          {projects.map((project) => (
+            <Col md={6} xl={4} className="project-card" key={project.title}>
+              <ProjectCard {...project} />
+            </Col>
+          ))}
         </Row>
       </Container>
     </Container>

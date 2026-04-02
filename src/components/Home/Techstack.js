@@ -2,46 +2,126 @@ import React from "react";
 import { Col, Row } from "react-bootstrap";
 import { CgCPlusPlus } from "react-icons/cg";
 import {
-  DiJavascript1,
-  DiReact,
-  DiNodejs,
-  DiPython,
-  DiJava,
-  DiHtml5,
-  DiCss3,
-  DiPostgresql,
-} from "react-icons/di";
+  FaAws,
+  FaCss3Alt,
+  FaDatabase,
+  FaDocker,
+  FaHtml5,
+  FaJava,
+  FaJenkins,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa";
+import { TbBrandCSharp, TbBrandReactNative } from "react-icons/tb";
+import {
+  SiDotnet,
+  SiGooglecloud,
+  SiJavascript,
+  SiPostgresql,
+  SiTypescript,
+} from "react-icons/si";
+
+const technologies = [
+  {
+    name: "JavaScript / TypeScript",
+    category: "Languages",
+    icons: [SiJavascript, SiTypescript],
+  },
+  {
+    name: "Python",
+    category: "Languages",
+    icons: [FaPython],
+  },
+  {
+    name: "C#",
+    category: "Languages",
+    icons: [TbBrandCSharp],
+  },
+  {
+    name: "C / C++",
+    category: "Languages",
+    icons: [CgCPlusPlus],
+  },
+  {
+    name: "Java",
+    category: "Languages",
+    icons: [FaJava],
+  },
+  {
+    name: "SQL",
+    category: "Data",
+    icons: [FaDatabase],
+  },
+  {
+    name: "HTML / CSS",
+    category: "Frontend",
+    icons: [FaHtml5, FaCss3Alt],
+  },
+  {
+    name: "React",
+    category: "Frontend",
+    icons: [FaReact],
+  },
+  {
+    name: "React Native",
+    category: "Mobile",
+    icons: [TbBrandReactNative],
+  },
+  {
+    name: "Node.js",
+    category: "Backend",
+    icons: [FaNodeJs],
+  },
+  {
+    name: ".NET",
+    category: "Backend",
+    icons: [SiDotnet],
+  },
+  {
+    name: "PostgreSQL",
+    category: "Data",
+    icons: [SiPostgresql],
+  },
+  {
+    name: "AWS",
+    category: "Cloud",
+    icons: [FaAws],
+  },
+  {
+    name: "GCP",
+    category: "Cloud",
+    icons: [SiGooglecloud],
+  },
+  {
+    name: "Docker",
+    category: "DevOps",
+    icons: [FaDocker],
+  },
+  {
+    name: "Jenkins",
+    category: "DevOps",
+    icons: [FaJenkins],
+  },
+];
 
 function Techstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px", color: "white" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <CgCPlusPlus />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiHtml5 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiCss3 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiNodejs />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiPostgresql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiReact />
-      </Col>
+    <Row className="techstack-grid">
+      {technologies.map(({ name, category, icons }) => (
+        <Col xs={6} md={4} lg={3} className="techstack-card-col" key={name}>
+          <div className="tech-card" title={name}>
+            <span className="tech-card-hover-label">{name}</span>
+            <p className="tech-card-category">{category}</p>
+            <div className="tech-card-icons" aria-hidden="true">
+              {icons.map((Icon, index) => (
+                <Icon key={`${name}-${index}`} className="tech-card-icon" />
+              ))}
+            </div>
+            <p className="tech-card-name">{name}</p>
+          </div>
+        </Col>
+      ))}
     </Row>
   );
 }
