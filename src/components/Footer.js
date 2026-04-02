@@ -31,14 +31,13 @@ function Footer() {
   return (
     <Container fluid className="footer">
       <Container className="footer-shell">
-        <Row className="align-items-center">
+        <Row className="align-items-center footer-row">
           <Col lg="4" className="footer-copywright">
             <p className="footer-kicker">James Pham</p>
-            <h3>Designed and built with React.</h3>
+            <h3 className="footer-title">Designed and built with React.</h3>
           </Col>
-          <Col lg="4" className="footer-copywright">
-            <p className="footer-kicker">Current Focus</p>
-            <h3>Full-stack applications, cloud systems, and practical machine learning.</h3>
+          <Col lg="4" className="footer-copywright footer-center">
+            <p className="footer-copy">Copyright © {year}</p>
           </Col>
           <Col lg="4" className="footer-body">
             <p className="footer-kicker">Connect</p>
@@ -57,7 +56,6 @@ function Footer() {
                 </li>
               ))}
             </ul>
-            <p className="footer-copy">Copyright © {year}</p>
           </Col>
         </Row>
       </Container>

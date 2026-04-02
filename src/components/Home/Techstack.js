@@ -110,8 +110,7 @@ function Techstack() {
     <Row className="techstack-grid">
       {technologies.map(({ name, category, icons }) => (
         <Col xs={6} md={4} lg={3} className="techstack-card-col" key={name}>
-          <div className="tech-card" title={name}>
-            <span className="tech-card-hover-label">{name}</span>
+          <div className="tech-card">
             <p className="tech-card-category">{category}</p>
             <div className="tech-card-icons" aria-hidden="true">
               {icons.map((Icon, index) => (

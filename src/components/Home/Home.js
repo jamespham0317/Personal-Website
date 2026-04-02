@@ -41,21 +41,6 @@ function Home() {
                     View Resume
                   </Button>
                 </div>
-
-                <div className="home-hero-meta">
-                  <div className="home-meta-card">
-                    <p className="home-meta-value">Full Stack</p>
-                    <p className="home-meta-label">Interfaces, APIs, and data-driven products</p>
-                  </div>
-                  <div className="home-meta-card">
-                    <p className="home-meta-value">Systems</p>
-                    <p className="home-meta-label">C++, Java, and performance-minded problem solving</p>
-                  </div>
-                  <div className="home-meta-card">
-                    <p className="home-meta-value">Cloud Ready</p>
-                    <p className="home-meta-label">AWS, Docker, PostgreSQL, and CI workflows</p>
-                  </div>
-                </div>
               </div>
             </Col>
           </Row>
