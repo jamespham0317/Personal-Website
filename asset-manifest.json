@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Personal-Website/static/css/main.f25f9401.css",
-    "main.js": "/Personal-Website/static/js/main.624e5d6d.js",
+    "main.css": "/Personal-Website/static/css/main.33a24d96.css",
+    "main.js": "/Personal-Website/static/js/main.9085f369.js",
     "static/js/787.d16e9580.chunk.js": "/Personal-Website/static/js/787.d16e9580.chunk.js",
     "static/media/James_Pham_s_Resume_2026.pdf": "/Personal-Website/static/media/James_Pham_s_Resume_2026.e2b9db1b141d9823a60f.pdf",
     "index.html": "/Personal-Website/index.html",
-    "main.f25f9401.css.map": "/Personal-Website/static/css/main.f25f9401.css.map",
-    "main.624e5d6d.js.map": "/Personal-Website/static/js/main.624e5d6d.js.map",
+    "main.33a24d96.css.map": "/Personal-Website/static/css/main.33a24d96.css.map",
+    "main.9085f369.js.map": "/Personal-Website/static/js/main.9085f369.js.map",
     "787.d16e9580.chunk.js.map": "/Personal-Website/static/js/787.d16e9580.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f25f9401.css",
-    "static/js/main.624e5d6d.js"
+    "static/css/main.33a24d96.css",
+    "static/js/main.9085f369.js"
   ]
 }
