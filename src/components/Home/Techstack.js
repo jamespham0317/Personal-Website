@@ -49,16 +49,6 @@ const technologies = [
     icons: [FaJava],
   },
   {
-    name: "SQL",
-    category: "Data",
-    icons: [FaDatabase],
-  },
-  {
-    name: "HTML / CSS",
-    category: "Frontend",
-    icons: [FaHtml5, FaCss3Alt],
-  },
-  {
     name: "React",
     category: "Frontend",
     icons: [FaReact],
@@ -69,6 +59,11 @@ const technologies = [
     icons: [TbBrandReactNative],
   },
   {
+    name: "HTML / CSS",
+    category: "Frontend",
+    icons: [FaHtml5, FaCss3Alt],
+  },
+  {
     name: "Node.js",
     category: "Backend",
     icons: [FaNodeJs],
@@ -77,6 +72,11 @@ const technologies = [
     name: ".NET",
     category: "Backend",
     icons: [SiDotnet],
+  },
+  {
+    name: "SQL",
+    category: "Data",
+    icons: [FaDatabase],
   },
   {
     name: "PostgreSQL",

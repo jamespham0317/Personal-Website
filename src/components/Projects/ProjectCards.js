@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import { CgWebsite } from "react-icons/cg";
 import { BsGithub } from "react-icons/bs";
 
-function ProjectCards({ title, description, ghLink, demoLink, stack = [] }) {
+function ProjectCards({ title, description, ghLink, appLink, demoLink, stack = [] }) {
   return (
     <Card className="project-card-view">
       <Card.Body className="project-card-body">
@@ -30,6 +30,19 @@ function ProjectCards({ title, description, ghLink, demoLink, stack = [] }) {
             <BsGithub /> &nbsp;
             GitHub
           </Button>
+
+          {appLink && (
+            <Button
+              variant="primary"
+              href={appLink}
+              target="_blank"
+              rel="noreferrer"
+              className="project-card-action-button"
+            >
+              <CgWebsite /> &nbsp;
+              Live App
+            </Button>
+          )}
 
           {demoLink && (
             <Button

@@ -5,38 +5,40 @@ import Particle from "../Particle";
 
 const projects = [
   {
-    title: "Thyme Saver",
-    description: "A smart cooking assistant that uses Gemini Vision to identify dishes from uploaded images, suggest ingredients, and generate instructions. It includes user authentication with BCrypt, PostgreSQL-backed accounts, and AWS deployment.",
-    ghLink: "https://github.com/jamespham0317/Thyme-Saver",
-    demoLink: "",
-    stack: ["React", "Node.js", "PostgreSQL", "AWS"],
+    title: "CheatCode",
+    description: "A room-based multiplayer coding game where players solve algorithmic problems in real-time, built with React, WebSockets, and Docker for seamless gameplay and deployment.",
+    ghLink: "https://github.com/AVEDtek/CheatCode",
+    appLink: "https://playcheetcode.vercel.app/",
+    stack: ["React", "WebSockets", "Docker"],
   },
   {
     title: "Maze Generator and Solver",
     description: "An interactive maze visualizer that generates and solves mazes using multiple algorithms with real-time animation, including DFS, Prim's, Kruskal's, BFS, A*, greedy best-first search, and wall-following strategies.",
     ghLink: "https://github.com/jamespham0317/Maze-Generator-and-Solver",
-    demoLink: "",
     stack: ["C++", "Algorithms", "raylib"],
   },
   {
     title: "Tumor Classification via CNN",
     description: "A convolutional neural network built with TensorFlow and Keras to classify histopathology images as benign or malignant, with training insights visualized using Matplotlib.",
     ghLink: "https://github.com/jamespham0317/Tumor-Classifier",
-    demoLink: "",
     stack: ["Python", "TensorFlow", "Keras", "Matplotlib"],
+  },
+  {
+    title: "Thyme Saver",
+    description: "A smart cooking assistant that uses Gemini Vision to identify dishes from uploaded images, suggest ingredients, and generate instructions. It includes user authentication with BCrypt, PostgreSQL-backed accounts, and AWS deployment.",
+    ghLink: "https://github.com/jamespham0317/Thyme-Saver",
+    stack: ["React", "Node.js", "PostgreSQL", "AWS"],
   },
   {
     title: "Space Invaders Clone",
     description: "A modern reimagining of Space Invaders with wave-based enemies, responsive controls, collision systems, persistent scoring, and gameplay polish implemented using raylib.",
     ghLink: "https://github.com/jamespham0317/Space-Invaders",
-    demoLink: "",
     stack: ["C++", "Game Development", "raylib"],
   },
   {
     title: "Recycle Radar",
     description: "A recycling assistant that uses Gemini Vision for material identification and pairs it with a map of nearby recycling depots plus a feed of relevant articles and community events.",
     ghLink: "https://github.com/jamespham0317/nwhacks2025",
-    demoLink: "",
     stack: ["React", "Maps API", "Gemini Vision"],
   },
   {

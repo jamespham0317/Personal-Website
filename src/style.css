@@ -13,14 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.purple {
-  color: var(--imp-text-color) !important;
-}
-
-.green {
-  color: #70dbb7;
-}
-
 button:focus {
   box-shadow: none !important;
 }
