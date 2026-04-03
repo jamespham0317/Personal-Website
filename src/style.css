@@ -322,11 +322,6 @@ button:focus {
   padding-left: 0 !important;
 }
 
-.home-heading-break {
-  display: block;
-  color: var(--text-primary);
-}
-
 .main-name {
   color: var(--accent-strong);
 }
