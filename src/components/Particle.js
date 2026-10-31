@@ -1,12 +1,16 @@
 import React from "react";
 import Particles from "react-tsparticles";
 
-function Particle() {
+function Particle({ theme }) {
   return (
     <Particles
+      key={theme}
       id="tsparticles"
       params={{
         particles: {
+          color: {
+            value: theme === "light" ? "#10996f" : "#ffffff",
+          },
           number: {
             value: 160,
             density: {

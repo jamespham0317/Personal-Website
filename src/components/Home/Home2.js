@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Techstack from "./Techstack";
+import Reveal from "../Reveal";
 
 function Home2() {
   return (
@@ -9,26 +10,26 @@ function Home2() {
         <Row className="justify-content-center">
           <Col lg={10} xl={9} className="home-about-description">
             <div className="home-about-shell">
-              <p className="section-eyebrow">About Me</p>
-              <h2 className="section-title">
-                I enjoy turning ideas into software that is practical, thoughtful, and fun to use.
-              </h2>
+              <Reveal as="p" className="section-eyebrow">About Me</Reveal>
+              <Reveal as="h2" className="section-title">
+                Curious by nature, driven by challenges, and passionate about building technology that makes a difference.
+              </Reveal>
 
-              <p className="home-about-body">
-                Hi! I&apos;m James Pham, a <span className="green">Computer Science</span> student at the University of British Columbia with a strong interest in building polished software end to end.
+              <Reveal as="p" className="home-about-body">
+                Hi! I&apos;m James Pham, a <strong className="green">Computer Science</strong> student at the <strong className="green">University of British Columbia</strong> with a passion for <strong className="green">software engineering</strong> and building impactful technology
                 <br />
                 <br />
-                I enjoy exploring different parts of <span className="green">software development</span>, from full-stack web apps and cloud-backed tools to games, algorithms, and machine learning projects.
+                I enjoy tackling <strong className="green">challenging problems</strong>, exploring emerging technologies, and turning ideas into <strong className="green">practical solutions</strong> through hands-on projects. 
                 <br />
                 <br />
-                Right now, I&apos;m looking for <span className="green">internship opportunities</span> where I can keep raising my technical bar, learn from experienced engineers, and contribute to meaningful products.
-              </p>
+                I’m always looking to grow as an engineer and am currently seeking <strong className="green">internship opportunities</strong> where I can contribute, learn, and collaborate with talented teams.
+              </Reveal>
 
               <div className="home-about-stack-section">
-                <p className="home-about-stack-kicker">Core Technologies</p>
-                <h2 className="home-about-stack-title">
+                <Reveal as="p" className="home-about-stack-kicker">Core Technologies</Reveal>
+                <Reveal as="h2" className="home-about-stack-title">
                   The tools I use to build across web, mobile, cloud, data, and systems work.
-                </h2>
+                </Reveal>
                 <Techstack />
               </div>
             </div>

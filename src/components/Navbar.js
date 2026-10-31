@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import {
   AiFillStar,
@@ -12,8 +11,9 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { BsMoonStarsFill, BsSunFill } from "react-icons/bs";
 
-function NavBar() {
+function NavBar({ theme, onToggleTheme }) {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -36,7 +36,7 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand as={Link} to="/" className="navbar-brand d-flex align-items-center">
+        <Navbar.Brand href="#home" className="navbar-brand d-flex align-items-center">
           <span className="brand-mark">JP</span>
           <span className="brand-text">James Pham</span>
         </Navbar.Brand>
@@ -53,15 +53,14 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link href="#home" onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/project"
+                href="#projects"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
@@ -73,12 +72,23 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                as={Link}
-                to="/resume"
+                href="#resume"
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item className="theme-toggle-item">
+              <button
+                type="button"
+                className="theme-toggle"
+                onClick={onToggleTheme}
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+                title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              >
+                {theme === "dark" ? <BsSunFill /> : <BsMoonStarsFill />}
+              </button>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">

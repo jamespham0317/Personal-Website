@@ -5,8 +5,8 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #081018;
-  background-image: radial-gradient(circle at top, rgba(112, 219, 183, 0.08), transparent 28%), linear-gradient(180deg, #081018 0%, #0a1120 100%);
-  color: #f5fffb;
+  background-color: var(--page-background);
+  background-image: var(--page-gradient);
+  color: var(--text-primary);
   min-height: 100vh;
 }
