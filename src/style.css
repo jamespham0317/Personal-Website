@@ -187,6 +187,7 @@ button:focus {
 .theme-toggle-item {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .theme-toggle {
@@ -225,6 +226,10 @@ button:focus {
 
   .navbar-nav .nav-item a::after {
     display: none !important;
+  }
+
+  .navbar-nav .fork-btn {
+    margin-top: 0.75rem;
   }
 }
 
@@ -280,6 +285,29 @@ button:focus {
 .navbar-nav .nav-item {
   position: relative;
   margin-left: 8px;
+}
+
+.navbar-nav .nav-link,
+.fork-btn-inner {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav {
+    align-items: center;
+  }
+}
+
+/* Tighten spacing so the full nav fits on one line at tablet widths */
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-nav .nav-item {
+    margin-left: 4px;
+  }
+
+  .navbar-nav .nav-link {
+    padding-right: 0.6rem !important;
+    padding-left: 0.6rem !important;
+  }
 }
 
 .navbar-nav .nav-item a {
@@ -1031,20 +1059,22 @@ button:focus {
   justify-content: center;
 }
 
-.resume-frame {
+/* Extra specificity so Bootstrap's `.row > *` gutter padding doesn't zero the sides */
+.resume>.resume-frame {
   width: 100%;
   padding: 1.5rem;
   border-radius: 30px;
   background: var(--card-background);
   border: 1px solid var(--surface-border);
   box-shadow: var(--panel-shadow);
-  overflow: auto;
+  overflow: hidden;
   display: flex;
   justify-content: center;
 }
 
 .resume-document {
   width: 100%;
+  min-width: 0;
 }
 
 .resume-frame .react-pdf__Page {

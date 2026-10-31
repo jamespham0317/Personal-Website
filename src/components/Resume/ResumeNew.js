@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import pdf from "../../Assets/../Assets/Resume.pdf";
@@ -9,10 +9,20 @@ import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
+  const documentRef = useRef(null);
+  const [pageWidth, setPageWidth] = useState(null);
 
+  // Render the page at the frame's width so the text and annotation layers match the canvas
   useEffect(() => {
-    setWidth(window.innerWidth);
+    const node = documentRef.current;
+    if (!node) return undefined;
+
+    const observer = new ResizeObserver(([entry]) => {
+      setPageWidth(Math.floor(entry.contentRect.width));
+    });
+    observer.observe(node);
+
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -43,9 +53,13 @@ function ResumeNew() {
 
           <Row className="resume">
             <Reveal className="resume-frame">
-              <Document file={pdf} className="resume-document d-flex justify-content-center">
-                <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-              </Document>
+              <div ref={documentRef} className="resume-document">
+                <Document file={pdf} className="d-flex justify-content-center">
+                  {pageWidth && (
+                    <Page pageNumber={1} width={Math.min(pageWidth, 1040)} />
+                  )}
+                </Document>
+              </div>
             </Reveal>
           </Row>
         </Container>
